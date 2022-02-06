@@ -4,6 +4,20 @@
 </head>
 <body>
 	<h1>Working on it</h1>	
+	<script type="application/javascript">
+		function resizeIFrameToFitContent(iFrame){
+			iFrame.width = iFrame.contentWindow.document.body.scrollWidth;
+			iFrame.width = iFrame.contentWindow.document.body.scrollHeight;
+		}
+
+		window.addEventListener('DOMContentLoaded',function(e){
+			var iframes = document.querySelectorAll("iframe");
+			for ( var i = 0; i < iframes.length; i++){
+				resizeIFrameToFitContent(iframes[i]);
+			}
+		});
+	</script>
+
 	<h1>iframe 1</h1>
 	<iframe src="https://carrot-0b347d75db4a4c0a.mc.ax/tasks?search=dice{"></iframe>
 
@@ -11,5 +25,7 @@
 
 	<h1>iframe2</h1>
 	<iframe src="https://carrot-0b347d75db4a4c0a.mc.ax/tasks?search=tuvie"></iframe>
+
+
 </body>
 </html>
